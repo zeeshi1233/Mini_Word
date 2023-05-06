@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 40px;
+            height: 30px;
+
+        }
+        button{
+    height: 40px;
+    
+}
+    </style>
+</head>
+
+<body>
+    <br>
+    <center>
+        <div>
+
+            <button class="btn btn-outline-success"   onclick="Toglebold()">Bold </button>
+            <button class="btn btn-outline-success"  onclick="red()"><img src="img/red.jfif" alt=""></button>
+            <button class="btn btn-outline-success"  onclick="blue()"><img src="img/download.png" alt=""> </button>
+            <button class="btn btn-outline-success"  onclick="green()"><img src="img/gree.png" alt=""></button>
+            <button class="btn btn-outline-success"  onclick="pink()"><img src="img/pink.png" alt=""></button>
+            &nbsp;              &nbsp;           &nbsp;
+            <button class="btn btn-outline-success"  onclick="bgred()"><img src="img/red.jfif" alt=""></button>
+            <button class="btn btn-outline-success"  onclick="bgblue()"><img src="img/download.png" alt=""> </button>
+            <button class="btn btn-outline-success"  onclick="bggreen()"><img src="img/gree.png" alt=""></button>
+            <button class="btn btn-outline-success"  onclick="bgpink()"><img src="img/pink.png" alt=""></button>
+            <button class="btn btn-outline-success"  onclick="inc()">A+</button>
+            <button class="btn btn-outline-success"  onclick="dec()">a-</button>
+            <button class="btn btn-outline-success"  onclick="rep()">Replace</button>
+            <button class="btn btn-outline-success"  onclick="countw()"  >Count Character</button>
+            <button class="btn btn-outline-success"  onclick="align()"  >Alignment</button>
+            <button class="btn btn-outline-success"  onclick="word()" id="wor">Word</button>
+            <button class="btn btn-outline-success mt-2"  id="len" style="display: none;"></button>
+          
+        </div>
+        <br>
+        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+            style="height: 100px;width:90%;"></textarea>
+    </center>
+
+    <script>
+
+function word(){
+
+    var tex = document.getElementById('floatingTextarea2').value;
+    var word=tex.split(' ');
+    var len=word.length;
+ document.getElementById('wor').innerHTML="Word " + len;
+
+
+
+
+}
+
+
+function rep(){
+    var tex = document.getElementById('floatingTextarea2');
+    var let=prompt("Enter Let")
+var user=prompt("Enter Replace Text");
+
+var rep=tex.value.replaceAll(let,user);
+
+tex.value=rep;
+
+
+}
+
+
+
+
+        function Toglebold() {
+            var tex = document.getElementById('floatingTextarea2');
+            if (tex.style.fontWeight == "bold") {
+                tex.style.fontWeight = 'normal'
+            }
+            else {
+                tex.style.fontWeight = "bold";
+
+            }
+
+
+        }
+
+        function red() {
+            var tex = document.getElementById('floatingTextarea2');
+            if (tex.style.color == "red") {
+                tex.style.color = 'black'
+            }
+            else {
+                tex.style.color = "red";
+            }
+        }
+        function green() {
+            var tex = document.getElementById('floatingTextarea2');
+            if (tex.style.color == "green") {
+                tex.style.color = 'black'
+            }
+            else {
+                tex.style.color = "green";
+
+            }
+
+
+        }
+        function blue() {
+            var tex = document.getElementById('floatingTextarea2');
+            if (tex.style.color == "blue") {
+                tex.style.color = 'black'
+            }
+            else {
+                tex.style.color = "blue";
+
+            }
+
+
+        }
+        function pink() {
+            var tex = document.getElementById('floatingTextarea2');
+            if (tex.style.color == "pink") {
+                tex.style.color = 'black'
+            }
+            else {
+                tex.style.color = "pink";
+
+            }
+
+
+        }
+
+        function bgpink() {
+    var tex = document.getElementById('floatingTextarea2');
+    if (tex.style.backgroundColor == "pink") {
+        tex.style.backgroundColor = 'white'
+        tex.style.color = "black";
+    }
+    else {
+        tex.style.backgroundColor = "pink";
+        tex.style.color = "white";
+    }
+}
+
+function bgred() {
+    var tex = document.getElementById('floatingTextarea2');
+    if (tex.style.backgroundColor == "red") {
+        tex.style.backgroundColor = 'white'
+        tex.style.color = "black";
+    }
+    else {
+        tex.style.backgroundColor = "red";
+        tex.style.color = "white";
+    }
+}
+
+function bggreen() {
+    var tex = document.getElementById('floatingTextarea2');
+    if (tex.style.backgroundColor == "green") {
+        tex.style.backgroundColor = 'white'
+        tex.style.color = "black";
+    }
+    else {
+        tex.style.backgroundColor = "green";
+        tex.style.color = "white";
+    }
+}
+
+function bgblue() {
+    var tex = document.getElementById('floatingTextarea2');
+    if (tex.style.backgroundColor == "blue") {
+        tex.style.backgroundColor = 'white'
+        tex.style.color = "black";
+    }
+    else {
+        tex.style.backgroundColor = "blue";
+        tex.style.color = "white";
+    }
+}
+
+function inc(){
+    var user=+prompt("Enter Font Size")
+    var tex = document.getElementById('floatingTextarea2');
+tex.style.fontSize=user+'px';
+
+}
+
+
+function dec(){
+    var user=+prompt("Enter Font Size")
+    var tex = document.getElementById('floatingTextarea2');
+    tex.style.fontSize=user+'px';
+}
+
+function countw(){
+    var tex = document.getElementById('floatingTextarea2').value;
+    var leng=tex.length;
+    if (leng>0) {
+        // t.style.display="flex";
+        document.getElementById('len').innerHTML="Length " + leng;
+        document.getElementById('len').style.display="flex ";        
+    }
+    else{
+    document.getElementById('len').style.display="none ";
+    alert("Please Write Text")
+}
+}
+function align(){
+    var tex = document.getElementById('floatingTextarea2').value;
+var user=prompt("Enter Aligment");
+if(user.toUpperCase()==="RIGHT"){
+document.getElementById('floatingTextarea2').style.textAlign='right';
+}
+else if(user.toUpperCase()==="CENTER"){
+    document.getElementById('floatingTextarea2').style.textAlign='center';
+
+}
+else if(user.toUpperCase()==="LEFT"){
+    document.getElementById('floatingTextarea2').style.textAlign='left';
+
+}
+
+
+
+}
+
+
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
